@@ -1,0 +1,425 @@
+@font-face {
+    font-family: 'roboto-regular';
+    src: url(font/Roboto-Regular_0.ttf);
+}
+@font-face{
+    font-family: 'helvetica-ultra-light';
+    src: url(font/helvetica-25-ultra-light.otf);
+}
+@font-face{
+    font-family: 'roboto-light';
+    src: url(font/Roboto-Light_0.ttf);
+}
+@font-face{
+    font-family: 'helvetica-condensed';
+    src: url(font/ps.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+/*---------------MENU---------------*/
+.header ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+#primeiro{
+    list-style-type: none;
+}
+.header li a {
+    background-color: transparent;
+    display: block;
+    padding: 20px 20px;
+    color: white;
+    text-decoration: none;
+    font-family: roboto-regular;
+    font-weight: lighter;
+}
+.menu {
+    clear: both;
+    max-height: 0;    
+}
+.menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: left;;
+    padding: 2em;
+    user-select: none;
+  }
+.navicon {
+    background-image: url(icon/hamburguer.svg);
+    background-size: cover;
+    display: block;
+    height: 30px;
+    position: relative;
+    width: 35px;
+  }
+.menu-btn {
+    display: none;
+  }
+.menu-btn:checked ~ .menu {
+    max-height: 240px;
+}
+.menu-btn:checked ~ .menu-icon .navicon {
+    background-image: url(icon/hamburguer-aberto0.svg);
+    background-size: cover;
+    display: block;
+    position: relative;
+}
+/*---------------Titulo---------------*/
+#titulo{
+    color: white;
+    font-family: helvetica-ultra-light;
+    font-weight: lighter;
+}
+/*---------------Formulario---------------*/
+#container2{
+    padding-bottom: 40px;
+    background-color: #29abe2;
+}
+.formulario{
+    width: 100%;
+    margin: 0;
+    padding-bottom:10px;
+    text-align: center;    
+}
+#cadastro{
+    font-family: helvetica-ultra-light;
+    font-weight: lighter;
+    color: white;
+    padding: 30px 0px;
+    font-size: 200%;
+}
+label{
+    font-family: roboto-regular;
+    font-weight: lighter;
+    color: white;
+    padding-top: 30px;    
+}
+.field{
+    padding: 10px 10px;
+}
+input, input:focus, input::placeholder{
+    outline: none;
+    background-color: transparent;
+    font-family: helvetica-condensed;
+    font-weight: lighter;
+    color: white;
+    border-width: 1px;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    border-color: white;
+    width: 400px;
+    padding-top: 10px;
+}
+input::-webkit-calendar-picker-indicator{
+    display: none;
+}
+
+input[type="date"]::-webkit-input-placeholder{ 
+    visibility: hidden !important;
+}
+label[for=nome], label[for=email]{
+    padding-right: 360px;
+}
+label[for=nascimento]{
+    padding-right: 318px;
+}
+label[for=telefone]{
+    padding-right: 340px;
+}
+#ultimo{
+    padding-bottom: 40px;
+}
+button{
+    outline: none;
+    border-style: none;
+    background-color:#012d51;
+    font: 10 22px helvetica-ultra-light;
+    font-style: none;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+}
+/*---------------Tabela---------------*/
+#container3{
+    min-height: 330px;
+}
+#container3{
+    margin: auto;
+    text-align: center;
+    padding: 30px 20px;
+}
+#lista{
+    color: #29abe2;
+    font-family: helvetica-ultra-light;
+    font-weight: lighter;
+    padding-bottom: 30px;
+    font-size: 200%;
+}
+#Table{
+    text-align: center;
+    border-collapse: collapse;
+    border: 2px solid transparent;
+    float: left;
+}
+#Table td, #Table th{
+    border: 1px solid #29abe2;  
+
+}
+#Table th{
+    font-family: roboto-regular;
+    color: #012d51;
+}
+#Table tbody tr td:nth-child(1){
+    width: 10%;
+    font-family: roboto-regular;
+    color: #012d51;
+}
+#Table tbody tr td:nth-child(2),#Table tbody tr td:nth-child(3),#Table tbody tr td:nth-child(4),#Table tbody tr td:nth-child(5){
+    width: 20%;
+    color: #808080;
+    font-family: helvetica-condensed;
+}
+#Table thead{
+    font-family: roboto-regular;
+}
+#Table th, #Table td{
+    padding: 10px 0px;
+}
+/*---------------Rodape---------------*/
+#rodape p{
+    color: white;
+    font-family: roboto-light;
+    text-align: center;
+    padding-top: 10px;
+}
+
+
+/*-----Desktop (acima 9 polegadas)-----*/
+@media (min-width: 54em){
+    /*---------------Container 1---------------*/
+    #container1{
+        background-image: url("img/index-image.jpg");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        min-height: 41em;
+        width: 100%;
+    }
+    #logo{
+        width: 10%;
+        padding: 3% 0% 0% 24%;
+    }
+    /*---------------Menu---------------*/
+    .header li {
+        float: left;
+        color: white;
+    }
+    .header ul {
+        float: right;
+        padding-top: 3%;
+        padding-right: 22%;
+        display: inline-flex;
+    }
+    .header li a {
+        padding: 0em 1.5em 0em 0em;
+    }
+    .header li a:hover{
+        text-decoration: underline;
+    } 
+    .menu {
+        max-height: none;
+    }
+    .menu-icon {
+        display: none;
+    }
+    /*---------------Titulo---------------*/
+    h1{
+       padding-top: 10%;
+       padding-left: 24%;
+       font-size: 530%;
+       font-weight: lighter;
+    }
+    #prova{
+        padding-left: 24%;
+        font-size: 225%;
+        font-weight: lighter;
+    }
+    #topo{
+        background-image: url(icon/topo-pag.svg);
+        background-size: 20%;
+        background-repeat: no-repeat;
+        float: right;
+        padding-right: 150px;
+        padding-top: 50px;
+    }
+    #top{
+        padding-top: 10em;
+        padding-right: 2em;
+    }
+    /*---------------Tabela---------------*/
+    #Table{
+        width: 70%;
+    }
+    #tabela{
+        padding-left: 23%;
+    }
+    /*---------------Rodape---------------*/
+    #rodape{
+        background-image: url(img/rodape-desktop.jpg);
+        background-color: #012d50;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        min-height: 14em;
+    }
+    #sobremim{
+        padding-top: 4%;
+        font-size: 90%;
+    }
+}
+
+
+/*-----Tablet (7 a 9 polegadas)-----*/
+@media (max-width: 53.99em){
+    /*---------------Container 1---------------*/
+    #container1{
+        background-image: url("img/index-image.jpg");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        min-height: 26.4em;
+        width: 100%;
+    }
+    #logo{
+        float: right;
+        width: 15%;
+        padding: 5% 0% 0% 45%;
+    }
+    /*---------------Menu---------------*/
+    .menu-btn:checked ~ .menu-icon{ 
+        background-color: #29abe2;
+        width: 15.4%;
+    }
+    ul{
+        background-color: #29abe2;
+        width: 37.2%;
+    }
+    .menu-icon{
+        padding-left: 17%;
+    }
+    .header{
+        z-index: 5;
+        position: absolute;
+    }
+    .header li a {
+        padding-bottom: 5%;
+        padding-left: 40%;
+    }
+    .header ul{
+        list-style-type: none;
+    }
+    #ultimomenu{
+        padding-bottom: 50px;
+    }
+
+    /*---------------Titulo---------------*/
+    h1{
+        padding-top: 16%;
+        padding-left: 24%;
+        font-size: 330%;
+        font-weight: lighter;
+     }
+     #prova{
+         padding-left: 24%;
+         font-size: 140%;
+         font-weight: lighter;
+     }
+    /*---------------Tabela---------------*/
+    #Table{
+        width: 90%;
+    }
+    #tabela{
+        padding-left: 10%;
+    }
+    /*---------------Rodape---------------*/
+    #rodape{
+        background-image: url(img/rodape-desktop.jpg);
+        background-color: #012d50;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        min-height: 8.5em;
+    }
+    #sobremim{
+        padding-top: 1.5%;
+        font-size: 70%;
+    }
+}
+
+/*-----Celular (até 7 polegadas)-----*/
+@media (max-width: 42em){
+    /*---------------Container1---------------*/
+    #container1{
+        background-image: url("img/index-image-mobile.jpg");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        min-height: 58em;
+        width: 100%;
+    }
+    #logo{
+        width: 20%;
+        padding: 8% 0% 0% 14%;
+    }
+    /*---------------Menu---------------*/
+    .menu-btn:checked ~ .menu-icon{ 
+        background-color: #29abe2;
+        width: 45%;
+    }
+    ul{
+        background-color: #29abe2;
+        width: 64.5%;
+    }
+    .menu-icon{
+        padding-left: 12%;
+    }
+    .header{
+        z-index: 5;
+        position: absolute;
+    }
+    .header li a {
+        padding-bottom: 5%;
+        padding-left: 20%;
+    }
+    .header ul{
+        list-style-type: none;
+    }
+    /*---------------Titulo---------------*/
+    h1{
+        padding-top: 30%;
+        padding-left: 15%;
+        font-size: 530%;
+     }
+    #prova{
+         padding-left: 15%;
+         font-size: 220%;
+    }
+    /*---------------Tabela---------------*/
+    #Table{
+        width: 100%;
+    }
+    #tabela{
+        padding-left: 1%;
+    }
+    /*---------------Rodape---------------*/
+    #rodape{
+        background-image: url(img/rodape-mobile.jpg);
+        background-color: #012d50;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        min-height: 21em;
+    }
+    #sobremim{
+        padding-top: 16.5%;
+        font-size: 90%;
+    }
+}

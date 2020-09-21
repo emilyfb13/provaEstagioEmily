@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Prova Estágio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container" id="container1">
+        <header class="header">
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+            <img src="icon/logo-in8-dev.svg" alt="Logo" id="logo">
+            <ul class="menu">
+                <li id="primeiro"><a href="#container2">cadastro</a></li>
+                <li><a href="#container3">lista</a></li>
+                <li><a id="ultimomenu" href="#rodape">sobre mim</a></li>
+            </ul>
+        </header>
+        <div class="" id="titulo">
+            <h1 id="estagio">ESTÁGIO</h1>
+            <h2 id="prova">PROVA DE SELEÇÃO</h2>
+        </div>
+    </div>
+    <div class="container" id="container2">
+        <form action="" class="formulario" id="form" method="post">
+            <h2 id="cadastro">CADASTRO</h2>
+            <div class="field">
+                <label for="nome">Nome</label></br>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+            </div>
+            <div class="field">
+                <label for="email">E-mail</label></br>
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+            </div>
+            <div class="field">
+                <label for="nascimento">Nascimento</label></br>
+                <input type="date" id="nascimento" name="nascimento" placeholder="Digite sua data de nascimento"
+                    required>
+            </div>
+            <div class="field" id="ultimo">
+                <label for="telefone">Telefone</label></br>
+                <input type="tel" id="telefone" name="telefone" placeholder="Digite seu número para contato" required>
+            </div>
+            <button type="submit" id="updateButton" class="btn btn-lg btn-primary">CADASTRAR</button>
+        </form>
+    </div>
+    <div class="row" id="container3">
+        <h2 id="lista">LISTA DE CADASTRO</h2>
+        <div id="tabela">
+        <table id="Table" class="table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th >Nome</th>
+                    <th>E-mail</th>
+                    <th>Nascimento</th>
+                    <th>Telefone</th>
+                </tr>
+            </thead>
+            <tbody><!--
+                <tr>
+                    <td>1</td>
+                    <td>Emily Ferreira de Brito</td>
+                    <td>emily@gmail.com</td>
+                    <td>12/09/1997</td>
+                    <td>5555555</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Emily</td>
+                    <td>emily@gmail.com</td>
+                    <td>12/09/1997</td>
+                    <td>5555555</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Emily</td>
+                    <td>emily@gmail.com</td>
+                    <td>12/09/1997</td>
+                    <td>5555555</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Emily</td>
+                    <td>emily@gmail.com</td>
+                    <td>12/09/1997</td>
+                    <td>5555555</td>
+                </tr>-->
+            </tbody>
+        </table>
+        <div id="top"><a href="#container1" id="topo"></a></div>
+        </div>
+    </div>
+    <footer id="rodape">
+        <div id="sobremim">
+            <p>Emily Ferreira de Brito</p>
+            <p>emilyferreirabrito@gmail.com</p>
+            <p>(35) 9 9837-1696</p>
+            <p>Universidade Federal de Ouro Preto</p>
+        </div>
+    </footer>
+    <script type="text/html" id="Template">
+            <tr>
+            <td><%- id %></td>
+            <td><%- nome %></td>
+            <td><%- email %></td>
+            <td><%- nascimento %></td>
+            <td><%- telefone %></td>
+            </tr>
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/Table.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
